@@ -80,3 +80,95 @@ console.log(Town) ;
 
 
 
+
+
+const family ={ baba:"Adem", anne:"Havva",sehir:"medine"}
+
+
+const {baba, ...restOfFamily} = family;
+
+console.log(`the rest of the family: ${restOfFamily} `) ;
+console.log(baba);
+console.log(restOfFamily) ;
+
+const usingOfSpread = {...family, sehir:'Mekke'}  // spread operator can be used to mutate the values in React
+console.log(usingOfSpread)
+
+
+
+
+// the use of array in located below;
+
+const number =[0,1,2,3,4,5];
+
+const [sifir,bir, ...anyOthers] = number;
+
+console.log(sifir);
+console.log(bir);
+console.log(anyOthers);
+console.log(sifir,bir,anyOthers);
+
+
+
+// the use of Deafult Parameter
+const plus = (firstNumber,secondNumber=0) =>  ` total value is  ${firstNumber + secondNumber}`
+
+console.log(plus(4,9));
+
+console.log(plus(3)); //naN not is a number  if we use the default parametere is will disappear when
+
+
+
+
+// how to concat thearrays with using spread 
+
+const array1 = [1,2,3,4,5];
+const array2 = [6,7,8,9,10];
+
+const lastVersionofArray = [...array1, ...array2];
+
+
+console.log(array1);
+console.log(array2);
+console.log(lastVersionofArray);
+
+const info1= {name:"ozguc",lastName:"Dalga"}
+const info2 = {town:"Istanbul",age:"31"}
+
+
+
+const consolidation = {...info1, ...info2};
+console.log(consolidation);
+
+
+
+
+
+
+// Ternary Conditional Operators
+
+// condition ?    if the condiition is true we write the codes after quetsion mark
+// condition ? if it is true :  if the condition is wronf we write the code after semicolon
+
+
+// conditon ? true : wrong
+
+// the most important thing is that we use only  one expression in Turnery operation
+// if we need to do lots of thing with condition we should use if block
+/* if (condition){
+    true
+}
+else {
+    wrong
+} */
+
+
+const theStatusOfBridge = "BRIDGE IS OPEN";
+
+theStatusOfBridge === "BRIDGE IS OPEN" 
+? console.log("bridge is really open OMG")
+: console.log("bridge is ON Maintenance");
+
+
+
+
