@@ -45,18 +45,38 @@ function topla(sayi1, sayi2){
 
 // 8 sonucu consoleda gorulur
 
-console.log(toplamlar(4,5));
+/* console.log(total(4,5));
 
-const toplamlar = (number1,number2) =>{
+const total = (number1,number2) =>{
     return number1 + number2 ;
-}
+} */
 
 // hata aliriz cunku degiskene baglayip cagirdik once fonx olusturulmali ondan sonra cagirilmali
-
-
 // implicit return de ise eger tek bir satir ifade yazacaksak {}  koymaya gerek yok  const toplamlar = (number1,number2) =>number1 + number2 
 
 
+
+
+
+
+
+
+// object array destructuring
+// obje ve disilerin parcalara bolunerek degiskenlere atanmasi islemi
+
+const customer = { customerName: 'Mehmet', customerAge: 34, city: "Toronto", Town:"Barry"};
+
+
+const { customerAge, customerName } = customer; 
+
+console.log(customerAge) ;
+console.log(customerName) ;
+
+const { Town, ...others } = customer;
+// rst operator => rest  (spread operator)
+
+console.log(others) ;
+console.log(Town) ;
 
 
 
