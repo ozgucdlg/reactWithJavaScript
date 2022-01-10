@@ -172,3 +172,111 @@ theStatusOfBridge === "BRIDGE IS OPEN"
 
 
 
+// find(), some(), every()
+
+const urunler =[
+    {id:1, urunIsmi:"Kalem", fiyat:5},
+    {id:2, urunIsmi:"Defter", fiyat:10},
+    {id:3, urunIsmi:"Silgi", fiyat:2},
+    {id:4, urunIsmi:"Kalmelik", fiyat:7}
+];
+
+
+// FIND  =>  it finds element in array but when it found it stops searching
+
+console.log('find methodu',urunler.find((urun)=>{
+    return urun.fiyat > 5
+})
+);
+// {id: 2, urunIsmi: 'Defter', fiyat: 10} because when it finds first  he stops
+
+
+
+
+// SOME => it turns true or false if finding the result more than 1 situation
+
+console.log('some method', urunler.some((urun)=>{
+    return urun.fiyat > 5 ;
+}));
+
+
+
+// EVERY => it turns the code for all condition in array  => dizinin butun elelmanlari saglarsa true doner 
+
+console.log("Every method", urunler.every((urun) =>{
+    return urun.fiyat >= 3; 
+}));
+
+
+
+
+
+//include methodu
+// bir method icinde verilen ofadenin olup olmadigini kontrol eder ve buyuk kucuk harf duyarliligi vardir
+
+const nickname="Mehmet"
+
+console.log("Include method =>", nickname.includes("met"))  // true
+
+console.log("include method", nickname.includes("mehmet")); // false because it is sensitive in lower Case
+
+const updatedNickName = nickname.toLowerCase();
+
+console.log("new nickname is ", updatedNickName);
+console.log("another trying", updatedNickName.includes("mehmet")); // it turns true because we changed the the capital case
+
+
+const school="LAMBTON";
+console.log(school.toLowerCase().includes("lambton"));
+
+
+
+
+
+// MAP =>  map function goes around in the array with its own callback function and then creates new array 
+
+const products=[
+    { id:1, productName:"laptop", unit:22, price:500},
+    { id:2, productName:"playstation", unit:45, price:900},
+    { id:3, productName:"remoteControl", unit:56, price:100}
+];
+
+const display= products.map(product => {
+    return product.productName;
+})
+
+console.log(display);
+
+
+
+
+// dizilerde filter kullanimi   => the use of filter in array {there will be a callback function whic checks the array
+//   if the condition is true it will eleminate and will show the rest in the new array }
+
+
+const filterSystem = products.filter((product)=>{
+    return  'the result is',  product.unit >44
+})
+
+console.log(filterSystem);
+
+
+
+
+
+// reduce it turn a callback function and the walue will be remembered in each cycle
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
