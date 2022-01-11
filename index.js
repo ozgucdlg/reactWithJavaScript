@@ -261,10 +261,17 @@ const filterSystem = products.filter((product)=>{
 console.log(filterSystem);
 
 
-
+console.table(products);
+console.table(filterSystem);
 
 
 // reduce it turn a callback function and the walue will be remembered in each cycle
+// it has 4 parameters
+
+
+
+
+
 
 
 
