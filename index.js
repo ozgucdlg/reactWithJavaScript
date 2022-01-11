@@ -267,7 +267,49 @@ console.table(filterSystem);
 
 // reduce it turn a callback function and the walue will be remembered in each cycle
 // it has 4 parameters
+// firrt accumulator =  her donguden cikan sonucun toplandigi deger  , 
+// second  current value =>   sirasi gelen dizi degeri
 
+const toplUrun = products.reduce((topl, pro) => topl = topl + pro.price, 0)
+
+console.log({ toplUrun });
+
+
+const toplUrunUnit = products.reduce((topl1,pro1) => topl1 = topl1 + pro1.unit, 0)
+
+console.log({ toplUrunUnit })
+
+const toplamString = products.reduce((toplam,product) => toplam =  `${toplam}  ${product.productName}`, "urun ismleri:");
+
+console.log({ toplamString })
+
+
+/// promise and async await
+
+// promise => sonucu oljmlu yada olumsuz, gelecekte belli olacaka bir islemi ifade eder 
+// eszamanli olan kodlarin bloklanmadan tamamlanmasini saglar enson promise ne zaman sonuclanirsa  ozaman devreye girer
+//.then   ve .catch  adinda iki zincir fonx ile kulllanirlir
+//. then() basarili olma durumu sonrasi islenir
+// .catch() basarisiz olma durumu sonrasinda olcakalar islenir
+
+
+const veriGetir = new Promise((resolve,reject) => {
+    const verigeldimi = false;
+    if(verigeldimi){
+        resolve("it is successfull")
+    }
+    else{
+        reject("no any data")
+    }    
+    
+});
+
+// console ujn ne calistiracagi veri geldimi ifadesinde donen degere baglidir false donerse catch calisacak,
+// true donerse then calisacak
+
+veriGetir
+.then(respond => console.log(respond))
+.catch(error  => console.log(error))
 
 
 
