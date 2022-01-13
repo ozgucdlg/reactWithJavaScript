@@ -313,9 +313,16 @@ veriGetir
 
 
 
+ ///  Components and props
 
 
+ //  => props a gelene tum veriler hangi isimle ile geldiyse props.isim seklinde cagrislir
+ // eger alt bilesen ile isim verildiyse cagrilirken props.children seklinde cagrilir
 
+ 
+
+/* <body   name:"John">
+</body> */
 
 
 
