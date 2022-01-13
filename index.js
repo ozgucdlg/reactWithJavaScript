@@ -164,10 +164,15 @@ else {
 
 
 const theStatusOfBridge = "BRIDGE IS OPEN";
+const thestatusOfReport = "tv shows"
 
 theStatusOfBridge === "BRIDGE IS OPEN" 
 ? console.log("bridge is really open OMG")
-: console.log("bridge is ON Maintenance");
+: console.log("bridge is ON Maintenance");\
+
+
+
+
 
 
 
